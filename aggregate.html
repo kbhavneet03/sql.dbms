@@ -1,0 +1,174 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Aggregate Functions</h2>
+SQL provides us with some really commendable features and aggregate functions are 
+definitely one of those features.
+Aggregate functions in SQL are used to perform operations on multiple rows of a table and return a 
+single value. A single function can be used to compute multiple values and return the required result.
+An aggregate function in SQL performs a calculation on multiple values and returns a single value. SQL provides 
+many aggregate functions that include avg, count, sum, min, max, etc. An aggregate function ignores NULL values 
+when it performs the calculation, except for the count function.
+<br>
+Aggregate functions in SQLs are an exceptionally useful feature in data retrieval from the database. The fact 
+that you can query data and apply functions in the same query is remarkable
+A single-line query can be used to perform operations on multiple records. Using an SQL aggregate function saves 
+time as well as avoids any errors.
+<h3>Types of Aggregate Functions in SQL</h3>
+1.<u>COUNT() Function<br></u>
+The COUNT() aggregate function returns 
+the total number of rows from a database table that matches the defined criteria in the SQL query.
+<br>Syntax:
+<br><b>
+COUNT(*) OR COUNT(COLUMN_NAME)</b><br><br>
+COUNT(*) returns the total number of rows in a given table. COUNT(COULUMN_NAME) returns the total number
+ of non-null values present in the column which is passed as an argument in the function.
+ <br><br>
+ 2.<u>SUM() Function</u><br>
+The SUM() function takes the name of the column as an argument and returns the sum of all the non NULL 
+values in that column. It works only on numeric fields(i.e the columns contain only numeric values). When 
+applied to columns containing both non-numeric(ex - strings) and numeric values, only numeric values are 
+considered. If no numeric values are present, the function returns 0.<br>
+Syntax:
+<br>
+<b>SUM(COLUMN_NAME) </b><br><br>
+The function name is SUM() and the name of the column to be considered is passed as an argument to the function.
+<br><br>
+3.<u>AVG() Function</u><br>
+The AVG() aggregate function uses the name of the column as an argument and returns the average of all the 
+non NULL values in that column. It works only on numeric fields(i.e the columns contain only numeric values).
+When applied to columns containing both non-numeric (ex - strings) and numeric values, only numeric 
+values are considered. If no numeric values are present, the function returns 0.
+<br>
+Syntax:
+<br><b>AVG(COLUMN_NAME)</b><br><br>
+The function name is AVG() and the name of the column to be considered is passed as an argument to the function.
+<br><br>
+4.<u>MIN() Function</u><br>
+The MIN() function takes the name of the column as an argument and returns the minimum value present in 
+the column. MIN() returns NULL when no row is selected.<br>
+Syntax:
+<br><b>MIN(COLUMN_NAME)</b><br><br>
+The function name is MIN() and the name of the column to be considered is passed as an argument to the function.
+<br><br>
+5.<u>MAX() Function</u><br>
+The MAX() function takes the name of the column as an argument and returns the maximum value present 
+in the column. MAX() returns NULL when no row is selected.<br>
+Syntax:
+<br><b>MAX(COLUMN_NAME)</b><br><br>
+The function name is MAX() and the name of the column to be considered is passed as an argument to the function.
+<br><br>
+
+<img src="17.PNG" alt="Example" width="400" height="200"><br><br>
+<img src="18.PNG" alt="Example" width="400" height="200"><br><br>
+<img src="19.PNG" alt="Example" width="400" height="200"><br><br>
+      </div>
+    </div>
+  </div></body></html>

@@ -1,0 +1,157 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>CREATE COMMAND</h2>
+        <span class="strikethrough"></span>
+        <p>CREATE command is a DDL command.DDL stands for Data Definition Language. The DDL commands are used to define or 
+          alter the structure of the table. Some common examples of DDL commands are create table command, 
+          alter table command, etc.The create table command is the DDL command for creating a table in a
+           MySQL database.<br><br>
+          <b>Syntax:<br>
+          CREATE TABLE tableName(ColumnName datatype size constraint);</b><br><br>
+          Each column in a table must have a name, data type, and size (size defines the maximum length of data that a given column may carry).
+          CREATE TABLE is the keyword telling the database system what you want to do. In this case, you want to create a new
+           table. The unique name or identifier for the table follows the CREATE TABLE statement.
+          Then in brackets comes the list defining each column in the table and what sort of data type it is.</p>
+          <img src="#" alt="Example">
+        <h2>Create a Table using another table</h2>
+        <p>A copy of an existing table can be created using a combination of the CREATE TABLE statement and the SELECT statement. The new table has the same column definitions. All columns or specific columns can be selected. When you will create a new table using the 
+          existing table, the new table would be populated using the existing values in the old table.<br><br>
+          <b>Syntax:<br>
+          CREATE TABLE NEW_TABLE_NAME AS<br>
+             SELECT [ column1, column2...columnN ]<br>
+             FROM EXISTING_TABLE_NAME<br>
+             [ WHERE ]<br><br></b>
+          Here, column1, column2... are the fields of the existing table and the same would be used to create fields of the new table.</p>
+          <img src="#" alt="Example">
+          <h2>SELECT Command</h2>
+          <p>In SQL ( or Structured Query Language ), the SELECT statement is the most extensively used command. It's used to look up 
+            information in one or more database tables and views and obtain the data that matches the criteria we specify.The SELECT query in SQL is used in fetching data from a database table.
+            The fetching can be adjusted to retrieve data that meets a set of criteria.
+            The data is returned in a tabular format, where the table is called the result set.<br>
+            The SELECT statement in SQL is frequently used alongside the FROM, WHERE, GROUP BY, LIMIT, etc. clauses.
+            The SELECT statement in SQL is used to retrieve data from a database table, filtering and working with data types. The accessed data is in a tabular format. This result table is called the result set.
+            The SELECT clause in SQL is usually used in conjunction with the FROM clause to define the table name(s) and the WHERE and ORDER BY clauses to filter or sort the data based on the specified condition(s).
+            <br><br><b>Syntax of SELECT Statement in SQL</b>
+            The basic syntax for using SELECT is to specify the column names we want to retrieve, followed by the FROM clause to designate the name of the database table:
+            <b><br>
+            SELECT  <br>  
+                column1, <br>
+                column2, <br>
+                …… <br>
+            FROM table_name;<br><br></b>
+            In case we want to retrieve all the columns, we can replace writing individual column names with *.
+            <br><br><b>
+            SELECT * FROM table_name;</b> </p>
+            <img src="1.PNG" alt="Example" width="400" height="300">
+      </div>
+    </div>
+  </div></body></html>

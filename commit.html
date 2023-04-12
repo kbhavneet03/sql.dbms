@@ -1,0 +1,157 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Commit and Rollback</h2>
+        <h3><u>Commit</u></h3>
+        The COMMIT command is an essential part of SQL for saving database changes. It's executed after 
+        a DML (Data Manipulation Language) statement, such as INSERT, DELETE, or UPDATE, to ensure permanent
+         changes.
+Transactions are a set of SQL commands executed as a single unit of work. Without the COMMIT command, any DML
+ operations performed are only visible to you.
+When you execute the COMMIT command, the changes made in the database are saved and become visible to all users.
+You can use a SELECT statement to check the updated record or data from the table that is modified.
+Thus, by using the COMMIT command, you can ensure that your SQL transactions are complete and the changes 
+made to the database are permanent.
+<br><br>
+Syntax of COMMIT command in SQL:<br>
+<b>
+COMMIT;<br><br></b>
+It is important to note that the COMMIT command can only be used in conjunction with transactions. 
+It cannot be used in isolation to save changes to the database. Transactions can be started using the BEGIN 
+TRANSACTION or START TRANSACTION command, and can be rolled back using the ROLLBACK command.<br>
+<br>
+<h3><u>Rollback</u></h3>
+ROLLBACK leads the current transaction to traverse back, i.e., it reverts all the updates performed by
+ the SQL statements and restores the database to the way it was before the first statement of the transaction 
+ process.
+These are a few factors on which ROLLBACK is usually decided on:<br>
+Duration for which the transaction has been running<br>
+Already updated data by transaction<br>
+Data yet to be updated by the transaction process.<br>
+Data changes captured in the log files get discarded and are not reflected in the database.
+ Old values can be restored by ROLLBACK using the log entries. That is why this process is also known as 
+ "Undoing".
+<br><br>
+Syntax:
+<br><b>
+ROLLBACK;<br><br></b>
+ROLLBACK in SQL is a method of undoing the changes made to the database.
+The old values are therefore restored, and the database disk changes are discarded. Now that we know how 
+to revert back the changes in a database, it's time to play around with some SQL codes on your editor.<br>
+       
+          <br>
+          <img src="22.PNG" alt="Example" width="400" height="200"><br><br>
+          <img src="23.PNG" alt="Example" width="400" height="200"><br><br>
+          <img src="24.PNG" alt="Example" width="400" height="200">
+          <img src="22.1.PNG" alt="Example" width="400" height="180"><br><br>
+
+      </div>
+    </div>
+  </div></body></html>

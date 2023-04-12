@@ -1,0 +1,132 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h1>Functions</h1>
+The PL/SQL Function is very similar to PL/SQL Procedure. The main difference between procedure and
+ a function is, a function must always return a value, and on the other hand a procedure may or may not 
+ return a value. Except this, all the other things of PL/SQL procedure are true for PL/SQL function too.
+<br><br>
+Syntax to create a function:<br>
+
+CREATE [OR REPLACE] FUNCTION function_name [parameters]  <br>
+[(parameter_name [IN | OUT | IN OUT] type [, ...])]  <br>
+RETURN return_datatype  <br>
+{IS | AS}  <br>
+BEGIN  <br>
+   (function_body)<br>
+END [function_name]; <br>
+<img src="50.png" alt="Example" width="500" height="300">
+<br><br>
+<img src="51.png" alt="Example" width="500" height="300">
+<img src="52.png" alt="Example" width="500" height="200">
+
+</div>
+</div>
+</div></body></html>

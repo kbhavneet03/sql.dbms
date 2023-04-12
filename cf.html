@@ -1,0 +1,172 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Character Function</h2>
+        Character functions accept character inputs and can return either characters or number values as output.
+         SQL provides a number of different character datatypes which includes CHAR, VARCHAR, VARCHAR2, LONG,
+          RAW, and LONG RAW. The various datatypes are categorized into three different datatypes :<br>
+1. VARCHAR2 - A variable-length character datatype whose data is converted by the RDBMS.<br>
+2. CHAR - The fixed-length datatype.<br>
+3. SQL provides a rich set of character functions that allow you to get information about strings and 
+modify the contents of those strings in multiple ways. <br><br>
+Character functions are of the following two types:<br>
+1. Case-Manipulative Functions (LOWER, UPPER and INITCAP)<br>
+2. Character-Manipulative Functions (CONCAT, LENGTH, SUBSTR, INSTR, LPAD, RPAD, TRIM and REPLACE)<br>
+
+<h3>Case-Manipulative Functions</h3>
+
+1. LOWER : This function converts alpha character values to lowercase. LOWER will actually return a fixed-length
+ string if the incoming string is fixed-length. LOWER will not change any characters in the string that are not 
+ letters, since case is irrelevant for numbers and special characters, such as the dollar sign ( $ ) or modulus 
+ ( % ).<br><br>
+Syntax:<br>
+LOWER(SQL course)<br><br>
+2. UPPER : This function converts alpha character values to uppercase. Also UPPER function too, 
+will actually return a fixed-length string if the incoming string is fixed-length. UPPER will not change 
+any characters in the string that are not letters, since case is irrelevant for numbers and special characters, 
+such as the dollar sign ( $ ) or modulus ( % ).<br><br>
+Syntax:<br>
+UPPER(SQL course)<br><br>
+4. INITCAP : This function converts alpha character values to uppercase for the first letter of each word 
+and all others in lowercase. The words in the string is must be separated by either # or _ or space.<br><br>
+Syntax:<br>
+INITCAP(SQL course)<br><br>
+<h3>
+Character-Manipulative Functions</h3>
+
+1. CONCAT : This function always appends ( concatenates ) string2 to the end of string1. If either of the 
+string is NULL, CONCAT function returns the non-NULL argument. If both strings are NULL, CONCAT returns NULL.<br><br>
+Syntax:<br>
+ CONCAT('String1', 'String2')<br><br>
+
+2. LENGTH : This function returns the length of the input string. If the input string is NULL, then 
+LENGTH function returns NULL and not Zero. Also, if the input string contains extra spaces at the start,
+ or in between or at the end of the string, then the LENGTH function includes the extra spaces too and returns 
+ the complete length of the string.<br><br>
+Syntax:<br>
+LENGTH(Column|Expression)<br>
+
+3. SUBSTR : This function returns a portion of a string from a given start point to an end point. If a 
+substring length is not given, then SUBSTR returns all the characters till the end of string (from the starting 
+position specified).<br><br>
+Syntax:<br>
+SUBSTR('String',start-index,length_of_extracted_string)<br><br>
+ 
+4. INSTR : This function returns numeric position of a character or a string in a given string. 
+Optionally, you can provide a position m to start searching, and the occurrence n of string. Also, if the 
+starting position is not given, then it starts search from index 1, by default. If after searching in the string,
+ no match is found then, INSTR function returns 0.<br><br>
+Syntax: <br>INSTR(Column|Expression, 'String', [,m], [n])<br><br>
+<img src="25.PNG" alt="Example" width="400" height="200"><br><br>
+<img src="26.PNG" alt="Example" width="400" height="200"><br><br>
+<img src="27.PNG" alt="Example" width="400" height="200"><br><br>
+      </div>
+    </div>
+  </div></body></html>

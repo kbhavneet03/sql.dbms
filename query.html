@@ -1,0 +1,153 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Querying Database Table</h2>
+        SQL Query is used to query or retrieve information from the databases. 
+We can perform the following operations using the SQL query --<br><br>
+1.Use SQL query to create a new database and insert data into the database<br>
+2.Use the SQL query to retrieve (or fetch) data from the database. Also, to modify or update the existing 
+data in the database.<br>
+3.To delete or drop the data or table from the database using the SQL query . Also, we can create a new table 
+after that<br>
+4.Using the SQL query to set permissions for the tables, views and procedures. Also, to create functions, 
+views and stored procedures.<br>
+<h4>How To Write SQL Query?</h4>
+The basis of a query in SQL Server is the SELECT sentence which allows selecting the data to be displayed.
+An SQL SELECT statement retrieves records from a database table according to clauses (for example, FROM 
+and WHERE) that specify the criteria based on which our data will be selected. The syntax for the SQL SELECT
+ statement is:<br><br>
+<b>
+SELECT column1, column2 <br>
+FROM table1, table2 <br>
+WHERE column1 = 'xyz' and column2 = 'abc';<br></b><br>
+In the above SQL statement:<br>
+<li>The SELECT clause specifies one or more columns to be retrieved from the database. To specify multiple columns,
+ we should use a comma and a space between the column names. However, if we want to retrieve all columns, we can 
+ use the wild card * (an asterisk) SELECT * FROM ....<br></li>
+<li>The FROM clause specifies one or more tables that are to be queried. We can use a comma and space between the
+ table names while specifying multiple tables, for example, FROM Names, Addresses, Phone_Numbers, where the Names,
+  Addresses, etc. are the table names.<br></li>
+<li>The WHERE clause selects only the rows in which the specified column contains the mentioned value. WHERE allows
+ you to filter a query to be more specific. The value is generally enclosed in single quotes (for example, WHERE 
+ color = 'teal').<br></li>
+<li>The semicolon (;) is the statement terminator. However, if you have a single-line SQL query statement, 
+you may skip the semicolon (;). But it is mandatory if you have multi-lines of the query. In general, it is a 
+better practice to include the semicolon after every terminating statement of the SQL query.<br></li>
+<li>SQL stands for Structured Query Language. It is a language that is used to get information from databases.
+An SQL SELECT statement retrieves records from a database table according to clauses (for example, FROM and WHERE) that specify criteria. The data returned is stored in a result table called the result-set.
+The FROM clause specifies one or more tables to be queried. The WHERE clause selects only the rows in which the specified column contains the specified value.
+We can perform all the create, read, update, and delete operations using SQL queries. Apart from that, we can also set permissions for the tables, views and procedures.
+We can perform different operations like AND, OR, NOT, IN, and many others while querying our databases.</li>
+          <br><br>
+          <img src="8.PNG" alt="Example" width="500" height="300">
+          <img src="9.PNG" alt="Example" width="500" height="200">
+      </div>
+    </div>
+  </div></body></html>

@@ -1,0 +1,143 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Drop command</h2>
+        The Drop command in SQL not only deletes a table but also deletes other entities such as database, column, 
+index, constraint, etc. For example, the DROP COLUMN command deletes the specified column from the table, 
+and the DROP DATABASE command deletes the specified database and all of its information.
+<br>
+SQL's drop command is a DDL (Data Definition Language) command. DDL commands are used to create or alter 
+the structure of the database objects such as a table, column, etc. For example, CREATE TABLE is a DDL 
+command used to create the table with the given columns. Objects deleted using the Drop command are lost 
+permanently and cannot be rolled back.<br>
+
+The syntax for the Drop commands varies for different database providers such as MySql, Oracle, SQL Server,
+ etc. We follow the Oracle SQL syntax throughout this article for simplicity.
+<br>
+Syntax Of Drop Command In SQL<br>
+Below are the various possible ways to use the DROP command to delete different types of database entities.<br>
+<h4>DROP DATABASE</h4>
+The DROP DATABASE command is used to delete the entire database. When a database is deleted, all the tables,
+indexes, constraints, etc., present in it will be deleted. All the data stored in the database will be deleted. <br><br>
+<b>The syntax for dropping a database is<br><br>
+DROP DATABASE(database_name)<br></b>
+database_name - The name of the database to be deleted.<br>
+<h4>DROP TABLE</h4>
+The DROP TABLE command is used to delete the specified table and the data stored. <br><br><b>The syntax for 
+dropping a table is
+<br><br>
+DROP TABLE (table_name)</b><br>
+table_name - The name of the table to be deleted.<br>
+<img src="6.PNG" alt="Example" width="400" height="300"><br><br>
+<img src="7.PNG" alt="Example" width="400" height="300">
+      </div>
+    </div>
+  </div></body></html>

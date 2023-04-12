@@ -1,0 +1,167 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Date Functions</h2>
+        In SQL, dates are complicated for newbies, since while working with a database, the format of the data
+         in the table must be matched with the input data to insert. In various scenarios instead of date, datetime 
+         (time is also involved with date) is used. <br>
+For storing a date or a date and time value in a database,MySQL offers the following data types:<br>
+<br>
+DATE	format YYYY-MM-DD<br>
+DATETIME 	format: YYYY-MM-DD HH:MI: SS<br>
+TIMESTAMP 	format: YYYY-MM-DD HH:MI: SS<br>
+YEAR 	format YYYY or YY<br>
+Now, come to some popular functions in SQL date functions.<br>
+<br>
+1.<u>NOW()</u><br>
+Returns the current date and time. 
+<br>
+Query:
+<br>
+SELECT NOW();<br><br>
+2.<u>CURDATE()</u><br>
+ Returns the current date. <br>
+Query:<br>
+SELECT CURDATE();<br><br>
+3.<u>CURTIME()</u><br>
+ Returns the current time. <br>
+Query:
+<br>
+SELECT CURTIME();
+<br><br>
+4.<u>DATE()</u><br>
+Extracts the date part of a date or date/time expression. <br><br>
+5.<u>DATE_ADD() </u><br>
+ Adds a specified time interval to a date.
+<br>
+Syntax:
+<br>
+DATE_ADD(date, INTERVAL expr type);
+<br>
+Where,  date - valid date expression, and expr is the number of intervals we want to add. and type can be one 
+of the following: MICROSECOND, SECOND, MINUTE, HOUR, DAY, WEEK, MONTH, QUARTER, YEAR, etc. <br><br>
+6.<u>DATE_SUB()</u><br>
+ Subtracts a specified time interval from a date. The syntax for DATE_SUB is the same as DATE_ADD just the 
+ difference is that DATE_SUB is used to subtract a given interval of date.<br>
+
+7.<u>DATEDIFF()</u><br>
+ Returns the number of days between two dates. 
+<br><br>
+Syntax:<br>
+
+8.<u>DATEDIFF(date1, date2);</u>
+<br><br>
+date1 & date2- date/time expression<br><br>
+<img src="28.PNG" alt="Example" width="300" height="200"><br><br>
+<img src="29.PNG" alt="Example" width="300" height="200"><br><br>
+<img src="30.PNG" alt="Example" width="400" height="200"><br><br>
+      </div>
+    </div>
+  </div></body></html>

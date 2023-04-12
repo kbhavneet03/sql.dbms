@@ -1,0 +1,142 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Grant and Revoke Command</h2>
+        Data Control Language(DCL) deals with the commands used in SQL that permit a user to access, modify
+         or work on the different privileges in order to control the database. It allows the database owner to 
+         give access, revoke access, and change the given permissions as and when required. DCL is basically used 
+         for enforcing data security.
+         The DCL commands present in SQL are
+<br><br>
+         1. <u>GRANT</u>: GRANT is a DCL command used to grant(give access to) security privileges to specific 
+         database users. It is mostly used to restrict user access to INSERT, DELETE, SELECT, UPDATE, EXECUTE, 
+         ALTER or to provide privileges to user's data.<br><br>
+         2.<u> REVOKE</u>: REVOKE is a DCL command that is used to revoke the permissions/access that was granted via the GRANT command. It is mostly used to revert back to the time when no access was specified, i.e., withdrawing the permission that was authorized to carry out specific tasks.
+         syntax for writing DCL commands:-<br><br>
+         Syntax for writing GRANT command:
+         <br><b>
+         GRANT (privileges) ON (object name)<br>
+         TO (user/roles)<br></b><br>
+         Syntax for writing REVOKE command:<br>
+         <b>
+         REVOKE (privileges) ON (object name)<br>
+         FROM (user/roles)<br></b><br>
+         Explanation:<br>
+         
+         (privileges): Privileges here refers to the INSERT,DELETE,SELECT,UPDATE, EXECUTE, ALTER, 
+            ALL, reference privilege(reference privilege permits a user/role to declare foreign keys 
+            while creating relations) and all options provided by SQL.<br><br>
+         (object_name): Object could be anything amongst table, view or functions.<br><br>
+         (user/roles): Roles are the users to whom the privileges are granted or revoked.<br><br>
+
+          <img src="#" alt="Example">
+      </div>
+    </div>
+  </div></body></html>

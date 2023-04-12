@@ -1,0 +1,152 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Nested Queries</h2>
+        Nested query is one of the most useful functionalities of SQL. Nested queries are useful when we 
+        want to write complex queries where one query uses the result from another query. Nested queries will 
+        have multiple SELECT statements nested together. A subquery is a SELECT statement nested within another 
+        SELECT statement.A nested query in SQL contains a query inside another query. The outer query will use 
+        the result of the inner query. For instance, a nested query can have two SELECT statements, one on the inner
+         query and the other on the outer query.
+         <br><br>
+         The general syntax of nested queries will be:
+<br><b>
+SELECT column_name [, column_name ]<br>
+FROM table1 [, table2 ]<br>
+WHERE column_name OPERATOR<br>
+(<br>
+    SELECT column_name [, column_name ]<br>
+    FROM table1 [, table2 ]<br>
+    [WHERE]<br>
+)<br><br></b>
+The SELECT query inside the brackets () is the inner query, and the SELECT query outside the brackets
+ is the outer query. The outer query uses the result of the inner query.<br>
+ <h3>Independent Nested Queries</h3>
+In independent nested queries, the execution order is from the innermost query to the outer query. An outer 
+query won't be executed until its inner query completes its execution. The outer query uses the result of the
+ inner query. Operators such as IN, NOT IN, ALL, and ANY are used to write independent nested queries.<br>
+1. The IN operator checks if a column value in the outer query's result is present in the inner query's result. 
+The final result will have rows that satisfy the IN condition.<br>
+2. The NOT IN operator checks if a column value in the outer query's result is not present in the inner query's
+ result. The final result will have rows that satisfy the NOT IN condition.<br>
+3. The ALL operator compares a value of the outer query's result with all the values of the inner query's result 
+and returns the row if it matches all the values.<br>
+4. The ANY operator compares a value of the outer query's result with all the inner query's result values and returns
+ the row if there is a match with any value.<br>
+<h3> Co-related Nested Queries</h3>
+In co-related nested queries, the inner query uses the values from the outer query to execute the inner query 
+for every row processed by the outer query. The co-related nested queries run slowly because the inner query is 
+executed for every row of the outer query's result.<br><br>
+
+
+<img src="33.PNG" alt="Example" width="500" height="300"><br><br>
+      </div>
+    </div>
+  </div></body></html>

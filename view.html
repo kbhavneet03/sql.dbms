@@ -1,0 +1,159 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Views</h2>
+        A View in SQL is simply a virtual table created based on a result set of another SQL statement. 
+Views were introduced to reduce the complexity of multiple tables and deliver data in a simple manner. 
+Views help us maintain data integrity and provide security to the data, thus acting as a security mechanism.
+A database is a collection of tables storing some meaningful data. All the tables are connected with some form 
+of relation. But the fundamental question that arises here is that why do we need to create so many tables and 
+not just a single table. Multiple Tables allow storing large amounts of data in a systematic manner, rather than 
+repeating the same data in a single table. But, we cannot deny the fact that if we want to query some data from 
+this database, we need to bring all relevant tables together to make a new table.
+<br>
+So, if we observe this issue closely, we have the advantage of storing data in multiple tables on one side, 
+but on the other side, we have the problem of querying so scattered data. The solution to this problem brings 
+“SQL Views” into the picture. SQL Views have made managing data and tables relatively easy for users. Views are 
+virtual tables, i.e., they don't exist in reality in the database, hence don't require any storage in a database. 
+Virtual Tables also have rows and columns similar to a real table in a database. Such views are simply made 
+by selecting data(fields) from one or more tables, present in the database, with some conditions for selecting 
+rows of the table.<br>
+Views were introduced to reduce the complexity of the multiple tables and deliver data in a simple manner. 
+Views hide the complexity of the data in the database as they join and simplify multiple tables into a single 
+virtual table, which is easier for a user to understand.
+Being a virtual table, views take very little storage since the database contains only a view's 
+statements (definition) and not a copy of all the tables the view is creating. For example, even if we create
+ multiple views, it still won't take much space compared to a single real table in the database.<br>
+ <h3>Creating a View in SQL</h3>
+The Views in SQL are created with the CREATE VIEW syntax. Following is the basic syntax to create a VIEW in SQL:
+<br><br><b>
+CREATE VIEW view_name AS  <br>
+SELECT column1, column2...column N <br>
+FROM table1, table2...table N <br>
+WHERE condition;<br></b>
+To see the data in the view, we can query the view using the following SELECT statement:
+<br>
+SELECT  * FROM [view_name];<br>
+“CREATE VIEW” is used at the start of the code to initiate the view.<br>
+“SELECT” is used to decide which columns to pick from the tables.<br>
+With the help of the “FROM” term, we can select the tables from which columns(data) have to be picked.<br>
+“Table1..table N” denotes the names of the tables. (Here, for example, we have “Scaler Courses” &
+ “Author Details” as tables.)<br>
+“WHERE” is used to define the condition pertaining to selecting rows.<br>
+<h3>Deleting Rows Into a View</h3>
+    At regular intervals of the educational courses, feedback was taken from the students. While taking those feedback into account, the team at Scaler wanted to take down a particular course. To tackle this issue, they used one of the functionalities of the views in SQL. A row can be deleted from the view using the DELETE FROM statement. The following is the syntax to remove a row from the view.
+    <br><br><b>
+    DELETE FROM View_name<br>
+    WHERE condition;<br></b>
+    <img src="20.PNG" alt="Example" width="400" height="200"><br><br>
+    <img src="21.PNG" alt="Example" width="400" height="200">
+      </div>
+    </div>
+  </div></body></html>

@@ -1,0 +1,143 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Data Types, Variables and Constants</h2>
+        
+     
+A variable is a meaningful name which facilitates a programmer to store data temporarily during 
+the execution of code. It helps you to manipulate data in PL/SQL programs. It is nothing except a name given 
+to a storage area. Each variable in the PL/SQL has a specific data type which defines the size and layout of the 
+variable's memory.<br><br>
+Syntax for declaring variable:
+<br><b>
+variable_name [CONSTANT] datatype [NOT NULL] [:= | DEFAULT initial_value] </b> <br>
+<h3>Initializing Variables in PL/SQL</h3>
+Evertime you declare a variable, PL/SQL defines a default value NULL to it. If you want to initialize a 
+variable with other value than NULL value, you can do so during the declaration, by using any one of the 
+following methods.<br>
+The DEFAULT keyword<br>
+The assignment operator<br>
+<h3>PL/SQL Constants</h3>
+A constant is a value used in a PL/SQL block that remains unchanged throughout the program. It is a 
+user-defined literal value. 
+It can be declared and used instead of actual values.<br><br>
+Syntax to declare a constant:<br><b>
+
+constant_name CONSTANT datatype := VALUE;  </b><br><br>
+Constant_name:it is the name of constant just like variable name. The constant word is a reserved word and 
+its value does not change.<br>
+VALUE: it is a value which is assigned to a constant when it is declared. It can not be assigned later.<br><br>
+<img src="34.PNG" alt="Example" width="500" height="300">
+<img src="35.PNG" alt="Example" width="500" height="200"><br><br>
+<img src="36.PNG" alt="Example" width="300" height="200">
+<img src="38.PNG" alt="Example" width="300" height="200"><br><br>
+</div>
+</div>
+</div></body></html>

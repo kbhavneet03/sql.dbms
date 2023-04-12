@@ -1,0 +1,134 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Delete Query</h2>
+        <p>When we work with a database table, we might come across records that are no longer required and hence, need to be deleted. We use the DELETE query in
+             SQL to remove unwanted records from a given table. We can make use of the WHERE clause to delete only specific rows which satisfy a given condition.
+             In the database layer, we run the DELETE query for the user whose data is no longer required and the account needs to be deleted. This is where SQL comes in - SQL (Structured Query Language)
+              is a powerful programming language used to manage relational databases. One of its key features is the
+               ability to delete records from a table using a DELETE query.
+               <br><br>
+              <b> Syntax:<br>
+DELETE FROM table_name<br>
+WHERE condition;<br><br></b>
+table_name: denotes the name of the table from which the records are required to be deleted.<br>
+condition: specifies the criteria that must be met for a record to be deleted.<br>
+        <h4>Using Logical Operators in the Filter Condition</h4>
+            Suppose we want to have more than one filter condition in our WHERE clause. For example, we want to delete 
+            records of employees who are both - Software Engineers and are from Bangalore. Since the filter condition is 
+            a boolean expression, we can make use of logical operators like AND and OR to specify more than one condition.
+            The syntax would remain the same as earlier, i.e. we will still use the WHERE clause. Also, we will use 
+            the same parameters: tableName and filterConditions. There can be multiple filter conditions, 
+            separated by AND or OR operators, in the form of boolean expressions.<br><br>
+            <img  src="4.PNG" alt="Example" width="400" height="300"><br><br>
+            <img  src="5.PNG" alt="Example" width="400" height="300">
+      </div>
+    </div>
+  </div></body></html>

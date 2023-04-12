@@ -1,0 +1,172 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>Group-by clause</h2>
+        GROUP BY is a SQL query clause used to group data rows based on one or more columns in a table.
+         The query returns aggregated data instead of individual rows when using GROUP BY. The GROUP BY clause is 
+         often combined with aggregate functions such as SUM, AVG, COUNT, MAX, and MIN to calculate statistics or 
+         summarize data.<br>
+It's important to note that only the columns listed in the GROUP BY clause and aggregate functions can be 
+included in the SELECT statement when using GROUP BY. Any other columns not included in the GROUP BY clause or
+ an aggregate function will result in an error.
+<br>
+GROUP BY in SQL Syntax<br><b><br>
+SELECT column1, function(column2)<br>
+FROM table<br>
+WHERE condition<br>
+GROUP BY column1, column2<br>
+ORDER BY column1, column2;<br>
+</b><br>
+function: function applied on the columns exp, SUM() , AVG().<br>
+table: Name of the table used.<br>
+condition: Condition used.<br>
+<h4><u>GROUP BY with a Single Column</h4></u>
+When we are grouping the Table using a single column, the output has all the rows with the same value 
+of that particular column.<br><br>
+Syntax:
+<br><b>
+SELECT column1, function(column2) FROM table <br>
+GROUP BY column1;<br>
+<br></b>
+function: function applied on the column.<br>
+table: Name of the table used.<br>
+<h4><u>GROUP BY with Multiple Columns</h4></u>
+When we are grouping the Table using multiple columns, the output has all the rows with the same 
+value of both of those columns.<br><br>
+Syntax:
+<br><b>
+SELECT column1, function(column3) FROM table <br>
+GROUP BY column1, column2;
+<br></b>
+function: function applied on the column.<br>
+table: Name of the table used.<br>
+<h4><u>GROUP BY with Having Clause</h4></u>
+We can use the HAVING clause to specify which groups will be included in the final result set. We also can't 
+utilize aggregate functions like SUM(), COUNT(), and so on with the WHERE clause, as WHERE clause is used to place
+conditions on columns. So If we want to use aggregate functions on a group of data(group by), we must use the 
+HAVING clause.<br><br>
+Syntax:
+<br><b>
+SELECT column1, function(column2)<br>
+FROM table_name<br>
+WHERE condition<br>
+GROUP BY column1, column2<br>
+HAVING condition;<br>
+<br></b>
+function: Name of the function <br>
+table: Name of the table.<br>
+condition: Condition used.<br>
+          <br>
+          <img src="12.PNG" alt="Example" width="500" height="300"><br><br>
+          <img src="13.PNG" alt="Example" width="500" height="300">
+          <img src="14.PNG" alt="Example" width="500" height="300">
+      </div>
+    </div>
+  </div></body></html>

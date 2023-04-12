@@ -1,0 +1,165 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="index.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        <h2>INSERT INTO Statement</h2>
+        <p>INSERT is a DML (Data Manipulation Language) command. The SQL INSERT INTO statement is a command that is used to insert data into tables. Using the insert into table SQL, we can insert new single or multiple records in a table of 
+            relational databases. We can also copy the data from one table to another table using the INSERT INTO SELECT statement. For using the INSERT INTO SELECT statement, the data
+             types of the source and the destination tables have to be the same.
+             The SQL INSERT INTO statement is a SQL query or command used to insert data into tables. 
+             Using the insert into table SQL, we can insert new single or multiple records in a table of relational 
+             databases (databases like ORACLE, MySQL, MS-Access, IBM DB2, etc.).<br>
+             ~ A row of a database table is also known as a record or a tuple.<br>
+             ~ A column of a database table is also known as an attribute.<br>
+             For inserting the data into the table, we have two ways:<br>
+             1. The first one is by using the insert into table SQL command.<br>
+             2. We can also insert new records in the table using the SQL insert into the select 
+             statement.<br>Inserting data without using SELECT clause<br>
+              a. INSERT INTO by specifying the column names<br>
+We can insert new record(s) into the table of the database by mentioning the 
+specific column names. By specifying the column names, we get flexibility in the insertion of values, as we can change the order of columns and values from the actual order of 
+columns present in the table of the database.<br>
+<br><b>
+SYNTAX:
+<br>
+INSERT INTO table_name (column_1, column_2, ..., column_n) <br>
+VALUES (value_1, value_2, ..., value_n);<br><br>
+b. INSERT INTO without specifying the column names<br></b>
+We can insert new record(s) or values into the table of the database directly (without mentioning the column names). The syntax getter smaller when we do not specify the column names (the previous way). But, one of the drawbacks associated with the current way is that we do not get the flexibility, we cannot change the order of values from the actual order of columns present in the table of the database.
+<br><b><br>
+SYNTAX:
+<br>
+INSERT INTO table_name <br>
+VALUES (value_1, value_2, ..., value_n);<br></b>
+
+        <h2>SQL INSERT INTO SELECT statement</h2>
+        <p>We can copy the data from one table to another table using the INSERT INTO SELECT statement.        
+            For using the INSERT INTO SELECT statement, the data types of the source and the destination tables have to be the same.
+            The original data of the source table and the existing records of the destination tables are not affected.
+            As the other INSERT INTO statement, we have two ways of copying the data into the other table.
+            <br><br>
+            1. Without specifying the names of the columns of the table: We can copy all the columns of one table to the other table simply without mentioning the names of the columns.<br>
+           <br><b> SYNTAX:<br>
+            
+            INSERT INTO destination_table<br>
+            SELECT * FROM source_table<br>
+            WHERE condition;<br></b><br>
+            2. By specifying the names of the columns of the table: We can copy the specific columns of one table to the other table by mentioning the names of the required columns.<br>
+            <br><b>SYNTAX:<br>
+            
+            INSERT INTO destination_table (column_1, column_2, ..., column_n)<br>
+            SELECT (column_1, column_2, ..., column_n) FROM source_table<br>
+            WHERE condition;<br></b><br>
+            WHERE clause is optional. We can use the WHERE clause if we want only some specific conditional records to be copied from the source table to the destination table or output.
+          <br>
+          <img src="2.PNG" alt="Example" width="400" height="300">
+      </div>
+    </div>
+  </div></body></html>
