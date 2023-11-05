@@ -1,0 +1,153 @@
+<html>
+    <head>
+<style> .navBar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar nav li {
+            padding: 5px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 600px) {
+
+.menu,
+.form {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -5%;
+
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h1 {
+    font-size: 18px;
+}
+
+.navBar,
+.navBar nav li {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#hamMenu {
+    visibility: visible;
+    color: white;
+    font-size: 25px;
+    z-index: -1;
+}
+
+}
+
+.strikethrough {
+    position: relative;
+  }
+  
+  /*********************
+  BASE STYLE for Aesthetics Only
+  *********************/
+  
+  body {
+    background-color: #f9f7f7;
+    color: #000000;
+    margin-top: 3%;
+  }
+  
+  .container {
+    background-color: #892424;
+    width: 75%;
+    padding: 1.5%;
+  }
+  
+  h2 {
+    color: #000606;
+    padding-bottom: 1.5%;
+  }
+  .col-sm-12{
+  width: 600px;
+  border: 5px solid rgba(13, 13, 13, 0.79);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 10px 10px rgb(129, 132, 134);
+}
+  </style></head><body>
+    <div class="navBar" id="nv">
+      <nav>
+          <ul>
+              <!-- main nav section -->
+              <li><a href="website.html">HOME </a></li>
+              <li><a href="sql.html">MySQL</a></li>
+              <li><a href="plsql.html">PL/SQL</a>
+                <li><a href='about.html'>About </a></li>
+                <li><a href='java.html'>Java </a></li>
+          </ul>
+      </nav>
+  </div>
+
+      <div class="col-sm-12">
+        import java.lang.*;<br>
+        class D {<br>
+        static String getString(char x) {<br>
+            String s = String.valueOf(x);<br>
+            return s;<br>
+        }<br>
+        static boolean solve(String s1, String s2) {<br>
+            String a = getString(s1.charAt(0)), <br>
+                b = getString(s2.charAt(0));<br>
+        
+            for (int i = 1; i < s1.length(); i++)<Br>
+                if (s1.charAt(i) != s1.charAt(i - 1)){<br>
+                    a += getString(s1.charAt(i));<br>
+                }<br>
+            for (int i = 1; i < s2.length(); i++)<br>
+                if (s2.charAt(i) != s2.charAt(i - 1)){<br>
+                    b += getString(s2.charAt(i));<br>
+                }<br>
+            if (a.equals(b))<br>
+                return true;<br>
+        
+            return false;<Br>
+        }<br>
+        public static void main(String[] args) {<br>
+            String s1 = "hello", s2 = "hello";<br>
+            if (solve(s1, s2))<br>
+                System.out.print("Yes");<br>
+            else<br>
+                System.out.print("No");<br>
+        }<br>
+        }<br>
+        
+        
+
+
+        <span class="strikethrough"></span>
+        <p><br><br>
+            <img src="Screenshot (25).png" alt="Example" width="500" height="300">
+      </div>
+    </div>
+  </div></body></html>
