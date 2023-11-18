@@ -1,0 +1,750 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='./css/main.css' />
+    <link rel="shortcut icon" href="img\logo\Garcia Tavern-logos.jpeg" />
+    <script src="./js/anime.min.js"></script>
+    <script src="js/intro.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <style>
+        root {
+
+            --font: slategrey;
+            --background: wheat;
+            --menuColor: slategrey;
+        }
+
+
+        body {
+            width: auto;
+            background-image: url('https://wallpaperaccess.com/full/2454628.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            background-color: rgba(6, 3, 15, 0.926);
+            font-family:  'Lucida Grande';
+        }
+
+        /* nav bar styling */
+
+        .navBar {
+            margin-bottom: 20px;
+            width: 100%;
+            height: 10%;
+            position:scroll;
+            left: 0;
+            top: 0;
+            display: inline-block;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.541);
+        }
+
+        .navBar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        img {
+            margin: 10px;
+        }
+
+        i {
+            font-size: 20px;
+        }
+
+        i:hover,
+        a:hover {
+            color: dodgerblue;
+            cursor: pointer;
+        }
+
+        .navBar nav li {
+            padding: 10px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+
+
+        #hamMenu {
+            visibility: hidden;
+        }
+
+        /*  grid system for the webpage */
+
+        .header {
+            width: 80%;
+            height: auto;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            display: grid;
+            grid-template-rows: 1fr;
+        }
+
+        .header>div {
+            margin-top: 10%;
+            max-width: 100%;
+
+        }
+
+        .IntroMsg {
+            margin: 20px;
+            position: relative;
+            width: 100%;
+            left: 5%;
+            top: -20%;
+            text-align: center;
+            padding: 10px;
+            height: auto;
+            opacity: 0.9;
+            background-color: transparent;
+            border-radius: 10px;
+
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        /* for image seperation */
+
+
+        .story {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .imgContainer {
+            width: 90%;
+            height: fit-content;
+            position: relative;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            color: white;
+
+
+        }
+
+        .imgContainer>div {
+            margin: 10px;
+        }
+
+        .menuIntro>img {
+            width: 75%;
+            border-radius: 10%;
+            height: auto;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            filter: blur(0.5px);
+        }
+
+        .menuIntro {
+            text-align: center;
+            color: rgb(39, 39, 39);
+            border-radius: 10px;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            width: 100%;
+            left: 0%;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.9;
+            background-color: rgba(100, 98, 98, 0.288);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .menu,
+            .form {
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr;
+                position: relative;
+                top: -5%;
+
+            }
+
+            .logo {
+                width: 200px;
+                height: 200px;
+            }
+
+            html {
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h2,
+            h1 {
+                font-size: 18px;
+            }
+
+            .navBar,
+            .navBar nav li {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            #hamMenu {
+                visibility: visible;
+                color: white;
+                font-size: 25px;
+                z-index: -1;
+            }
+
+        }
+
+
+        .form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            position: relative;
+            width: 100%;
+            left: 0%;
+            top: 40px;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.9;
+            background-color: rgba(100, 98, 98, 0.288);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        .form input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+            opacity: 0.9;
+            margin: 10px;
+
+        }
+
+        .form span {
+            margin: 10px;
+        }
+
+        .form button {
+            width: 60%;
+            position: relative;
+            left: 2%;
+            margin: 5px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            text-shadow: 0.5px 0.5px black;
+            background-color: rgb(109, 103, 93);
+            padding: 10px;
+        }
+
+        .form button:hover {
+            cursor: pointer;
+            box-shadow: 0px 3px 6px slategray;
+        }
+
+        .form button:active {
+            background-color: rgba(30, 96, 161, 0.801);
+            border: none;
+        }
+
+        #home-menu ul {
+            background-color: white;
+            border-radius: 5px;
+            list-style: none;
+            padding: 30px;
+        }
+
+        #home-menu h2 {
+            text-shadow: 0.5px 0.5px black;
+        }
+
+        #home-menu ul:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        #home-menu li {
+            float: left;
+            width: 50%;
+            padding: 0;
+            margin: 20px 0 20px 8%;
+            border-bottom: 1px solid slategray;
+        }
+#toc_container {
+    background: rgba(12, 6, 31, 0.802) none repeat scroll 0 0;
+    border: 1px solid rgb(232, 222, 224);
+    display: table;
+    font-size: 95%;
+    margin-top: 6em;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+    color: rgb(249, 236, 236);
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+a[href]{
+    color: rgb(130, 165, 210); 
+}
+
+</style>
+</head>
+<body>
+    <div class="navBar" id="nv">
+        <nav>
+            <ul>
+                <!-- main nav section -->
+                <li><a href="website.html">HOME </a></li>
+                <li><a href="sql.html">MySQL</a></li>
+                <li><a href="plsql.html">PL/SQL</a>
+                    <li><a href="java.html">Java</a>
+                <li><a href="about.html">About</a>
+                    <li><a href="other.html">Other</a>
+            </ul>
+        </nav>
+    </div>
+<body>
+<div id="toc_container">
+<h2>Basic Programming Constructs</h2>
+
+<b>Program 1. Write a Java program to print ‘Hello World!’ on screen.</b><br>
+<button><a href="p1.java">code</button></a><a href="p1.png"><button>output</button></a><br>
+    
+<b>Program 2. Write a Java program to print the sum of two numbers.</b><br>
+<button> <a href="p2.java">code</button></a><a href="p2.png"><button>output</button></a><br>
+       
+<b>Program 3. Write a Java program that takes two numbers and display the product of two numbers. </b><br>
+<button> <a href="p3.java">code</button></a><a href="p3.png"><button>output</button></a><br>
+     
+<b>Program 4. Write a Java program to print the sum, multiply, subtract, divide and remainder of two numbers. </b><br>
+<button><a href="p4.java">code</button></a><a href="p4.png"><button>output</button></a><br>
+
+<b>Program 5. Write a Java program that takes five numbers as input to calculate and print the average of the numbers. </b><br>
+<button> <a href="p5.java">code</button></a><a href="p5.png"><button>output</button></a><br>
+
+       
+<b>Program 6. Write a Java program to swap two variables.</b><br>
+<button><a href="p6.java">code</button></a><a href="p6.png"><button>output</button></a><br>
+       
+<b>Program 7. Write a Java program to convert a decimal number to binary numbers. </b><br>
+<button><a href="p7.java">code</button></a><a href="p7.png"><button>output</button></a><br>
+       
+<b>Program 8. Write a Java program to convert a binary number to decimal number. </b><br>
+<button><a href="p8.java">code</button></a><a href="p8.png"><button>output</button></a><br>
+       
+<b>Program 9. Write a Java program to check whether Java is installed on your computer or not. </b><br>
+<button><a href="p9.java">code</button></a><a href="p9.png"><button>output</button></a><br>
+       
+<b>Program 10. Write a Java program and compute the sum of the digits of an integer </b><br>
+<button><a href="p10.java">code</button></a><a href="p10.png"><button>output</button></a><br>
+    
+       
+<b>Program 11. Write a Java program to compare two numbers. </b><br>
+<button> <a href="p11.java">code</button></a><a href="p11.png"><button>output</button></a><br>
+       
+<b>Program 12. Write a Java program to count the letters, spaces, numbers and other characters of an input string. </b><br>
+<button><a href="p12.java">code</button></a><a href="p12.png"><button>output</button></a><br>
+       
+<b>Program 13. Write a Java program to print the ascii value of a given character. </b><br>
+<button> <a href="p13.java">code</button></a><a href="p13.png"><button>output</button></a><br>
+       
+<b>Program 14. Write a Java program that accepts an integer (n) and computes the value of n+nn+nnn. </b><br>
+<button>  <a href="p14.java">code</button></a><a href="p14.png"><button>output</button></a><br>
+       
+<b>Program 15. Write a Java program to display the system time. </b><br>
+<button>  <a href="p15.java">code</button></a><a href="p15.png"><button>output</button></a><br>
+       
+<b>Program 16. Write a Java program to print the odd numbers from 1 to 20.</b><br>
+<button> <a href="p16.java">code</button></a><a href="p16.png"><button>output</button></a><br>
+       
+<b>Program 17. Write a Java program to print the even numbers from 1 to 20. </b><br>
+<button>  <a href="p17.java">code</button></a><a href="p17.png"><button>output</button></a><br>
+       
+<b>Program 18. Write a Java program to convert a string to an integer. </b><br>
+<button>  <a href="p18.java">code</button></a><a href="p18.png"><button>output</button></a><br>
+      
+<b>Program 19. Write a Java program to convert seconds to hour, minute and seconds.</b><br>
+<button> <a href="p19.java">code</button></a><a href="p19.png"><button>output</button></a><br>
+       
+<b>Program 20. Write a Java program to compute the sum of the first 100 prime numbers </b><br>
+<button> <a href="p20.java">code</button></a><a href="p20.png"><button>output</button></a><br>
+       
+<b>Program 21. Write a Java program to swap the first and last elements of an array and create a new array </b><br>
+<button>  <a href="p21.java">code</button></a><a href="p21.png"><button>output</button></a><br>
+       
+<b>Program 22. Write a Java program to count the number of even and odd elements in a given array </b><br>
+<button>  <a href="p22.java">code</button></a><a href="p22.png"><button>output</button></a><br>
+       
+<b>Program 23. Write a Java program to compute the square root of an given integer </b><br>
+<button> <a href="p23.java">code</button></a><a href="p23.png"><button>output</button></a><br>
+       
+<b>Program 24. Write a Java program to check if a positive number is a palindrome or not </b><br>
+<button> <a href="p24.java">code</button></a><a href="p24.png"><button>output</button></a><br>
+       
+<b>Program 25. Write a Java program to add two numbers without using any arithmetic operators </b><br>
+<button>  <a href="p25.java">code</button></a><a href="p25.png"><button>output</button></a><br>
+    
+<b>Program 26. Write a Java program to add all the digits of a given positive integer </b><br>
+<button> <a href="p26.java">code</button></a><a href="p26.png"><button>output</button></a><br>
+       
+<b>Program 27. Java program to find area of circle  </b><br>
+<button>  <a href="p27.java">code</button></a><a href="p27.png"><button>output</button></a><br>
+       
+<b>Program 28. Java Program to find area of rectangle </b><br>
+<button> <a href="p28.java">code</button></a><a href="p28.png"><button>output</button></a><br>
+       
+<b>Program 29. Java Program to find area of triangle </b><br>
+<button> <a href="p29.java">code</button></a><a href="p29.png"><button>output</button></a><br>
+       
+<b>Program 30. Java Program to find area of equilateral triangle </b><br>
+<button>  <a href="p30.java">code</button></a><a href="p30.png"><button>output</button></a><br>
+       
+<b>Program 31. Java Program to find area of rhombus </b><br>
+<button> <a href="p31.java">code</button></a><a href="p31.png"><button>output</button></a><br>
+    
+<b>Program 32. Java Program to find area of parallelogram </b><br>
+<button> <a href="p32.java">code</button></a><a href="p32.png"><button>output</button></a><br>
+       
+<b>Program 33. Java Program to find area of Prism </b><br>
+<button>  <a href="p33.java">code</button></a><a href="p33.png"><button>output</button></a><br>
+    
+<b>Program 34. Java Program to find volume of sphere </b><br>
+<button> <a href="p34">code</button></a><a href="p34.png"><button>output</button></a><br>
+       
+<b>Program 35. Java Program to find volume of cylinder </b><br>
+<button>  <a href="p35.java">code</button></a><a href="p35.png"><button>output</button></a><br>
+       
+<b>Program 36. Java Program to find volume of cuboid </b><br>
+<button>  <a href="p36.java">code</button></a><a href="p36.png"><button>output</button></a><br>
+       
+<b>Program 37. Java Program to find volume of cone </b><br>
+<button> <a href="p37.java">>code</button></a><a href="p37.png"><button>output</button></a><br>
+      
+<b>Program 38. Java program to find surface area of cuboid </b><br>
+<button> <a href="p38.java">code</button></a><a href="p38.png"><button>output</button></a><br>
+       
+<b>Program 39. Java program to find surface area of cylinder </b><br>
+<button> <a href="p39.java">code</button></a><a href="p39.png"><button>output</button></a><br>
+       
+<b>Program 40. Java program to find surface area of cube </b><br>
+<button> <a href="p40.java">code</button></a><a href="p40.png"><button>output</button></a><br>
+       
+<b>Program 41. Java program to calculate average marks </b><br>
+<button> <a href="p41.java">code</button></a><a href="p41.png"><button>output</button></a><br>
+       
+<b>Program 42. Java program to check vowel or consonant </b><br>
+<button> <a href="p42.java">code</button></a><a href="p42.png"><button>output</button></a><br>
+       
+<b>Program 43. Java program to sum of N numbers </b><br>
+<button> <a href="p43.java">code</button></a><a href="p43.png"><button>output</button></a><br>
+       
+<b>Program 44. Java program to find factorial of any number </b><br>
+<button> <a href="p44.java">code</button></a><a href="p44.png"><button>output</button></a><br>
+       
+<b>Program 45. Java Program to calculate electricity bill </b><br>
+<button> <a href="p45.java">code</button></a><a href="p45.png"><button>output</button></a><br>
+       
+<b>Program 46. Java Program To Calculate CGPA Percentage </b><br>
+<button> <a href="p46.java">code</button></a><a href="p46.png"><button>output</button></a><br>
+       
+<b>Program 47. Java Program to calculate compound interest </b><br>
+<button>  <a href="p47.java">code</button></a><a href="p47.png"><button>output</button></a><br>
+       
+<b>Program 48. Java Program To Calculate Batting Average </b><br>
+<button>  <a href="p48.java">code</button></a><a href="p48.png"><button>output</button></a><br>
+       
+<b>Program 49. Java Pogram to Calculate Commission Percentage. </b><br>
+<button>  <a href="p49.java">code</button></a><a href="p49.png"><button>output</button></a><br>
+       
+<b>Program 50. Java Pogram To Find Distance Between Two Points. </b><br>
+<button> <a href="p50.java">code</button></a><a href="p50.png"><button>output</button></a><br>
+       
+<b>Program 51. Java Program To Calculate Power Of Number. </b><br>
+<button>  <a href="p51.java">code</button></a><a href="p51.png"><button>output</button></a><br>
+       
+<b>Program 52. Write a Java program to take three numbers from the user and print the greatest number </b><br>
+<button> <a href="p52.java">code</button></a><a href="p52.png"><button>output</button></a><br>
+       
+<b>Program 53. Write a Java program to find the number of days in a month </b><br>
+<button> <a href="p53.java">code</button></a><a href="p53.png"><button>output</button></a><br>
+       
+<b>Program 54. Write a Java program to test a number is positive or negative </b><br>
+<button> <a href="p54.java">code</button></a><a href="p54.png"><button>output</button></a><br>
+       
+<b>Program 55. Write a Java Program to accept number of week’s day (1-7) and print name of the day </b><br>
+<button> <a href="p55.java">code</button></a><a href="p55.png"><button>output</button></a><br>
+       
+<b>Program 56. Write a Java program that takes a year from user and print whether that year is a leap year or not </b><br>
+<button> <a href="p56.java">code</button></a><a href="p56.png"><button>output</button></a><br>
+       
+<b>Program 57. Write a Java program to input 5 numbers from keyboard and find their sum and average </b><br>
+<button> <a href="p57.java">code</button></a><a href="p57.png"><button>output</button></a><br>
+       
+<b>Program 58. Write a program in Java to display the first 5 natural numbers </b><br>
+<button> <a href="p58.java">code</button></a><a href="p58.png"><button>output</button></a><br>
+       
+<b>Program 59. Write a java program to check vowel or consonant. </b><br>
+<button> <a href="p59.java">code</button></a><a href="p59.png"><button>output</button></a><br>
+       
+<b>Program 60. Write a Java program to display the cube of the number upto given an integer. </b><br>
+<button><a href="p60.java">code</button></a><a href="p60.png"><button>output</button></a><br>
+
+<b>Program 61. Write a Java program to display the n terms of odd natural number and their sum. </b><br>
+<button> <a href="p61.java">code</button></a><a href="p61.png"><button>output</button></a><br>
+       
+<b>Program 62. Write a Java program to display the multiplication table of a given integer. </b><br>
+<button>  <a href="p62.java">code</button></a><a href="p62.png"><button>output</button></a><br>
+
+<b>Program 63. Write a Java program that reads an integer and check whether it is negative, zero, or positive. </b><br>
+<button>  <a href="p63.java">code</button></a><a href="p63.png"><button>output</button></a><br>
+       
+<b>Program 64. Write a Java program that reads an positive integer and count the number of digits. </b><br>
+<button> <a href="p64.java">code</button></a><a href="p64.png"><button>output</button></a><br>
+       
+<b>Program 65. Write a Java program that accepts three numbers and check All numbers are equal or not. </b><br>
+<button>  <a href="p65.java">code</button></a><a href="p65.png"><button>output</button></a><br>
+       
+<b>Program 66. Write a java program that accepts three numbers from the user and check if numbers are in “increasing” or “decreasing” order. </b><br>
+<button>  <a href="p66.java">code</button></a><a href="p66.png"><button>output</button></a><br>
+       
+<b>Program 67. Write a Java program that determines a student's grade. </b><br>
+<button> <a href="p67.java">code</button></a><a href="p67.png"><button>output</button></a><br>
+       
+<b>Program 68. Write a Java program to create a simple calculator. </b><br>
+<button> <a href="p68.java">code</button></a><a href="p68.png"><button>output</button></a><br>
+       
+<b>Program 69. Write a Java program to concatenate two string. </b><br>
+<button>  <a href="p69.java">code</button></a><a href="p69.png"><button>output</button></a><br>
+       
+<b>Program 70. Write a Java program to convert all characters in a string to lowercase. </b><br>
+<button>  <a href="p70.java">code</button></a><a href="p70.png"><button>output</button></a><br>
+       
+<b>Program 71. Write a Java program to convert all characters in a string to uppercase. </b><br>
+<button>  <a href="p71.java">code</button></a><a href="p71.png"><button>output</button></a><br>
+       
+<b>Program 72. Write a Java program to trim a string(remove whitespaces). </b><br>
+<button>  <a href="p72.java">code</button></a><a href="p72.png"><button>output</button></a><br>
+       
+<b>Program 73. Write a Java program to get a substring of a given string between two specified positions. </b><br>
+<button> <a href="p73.java">code</button></a><a href="p73.png"><button>output</button></a><br>
+       
+<b>Program 74. Write a Java program to replace all the 'd' characters with 'f' characters. </b><br>
+<button>  <a href="p74.java">code</button></a><a href="p74.png"><button>output</button></a><br>
+       
+<b>Program 75. Write a java program to get the length of a given string.</b><br>
+<button> <a href="p75.java">code</button></a><a href="p75.png"><button>output</button></a><br>
+       
+<b>Program 76. Write a java program to print current date and time in the specified format. </b><br>
+<button>  <a href="p76.java">code</button></a><a href="p76.png"><button>output</button></a><br>
+       
+<b>Program 77. Write a Java program to get the character at the given index within the String. </b><br>
+<button> <a href="p77.java">code</button></a><a href="p77.png"><button>output</button></a><br>
+       
+<b>PROGRAM 78:Write a java program to remove a particular character from a string.</b><br>
+<button><a href="p78.java">code</a></button> <button><a href="p78.png">output</a></button><br>
+       
+<b>PROGRAM 79:Write a java program to reverse a String.</b><br>
+<button><a href="p79.java">code</a></button> <button><a href="p79.png">output</a></button><br>
+    
+<b>PROGRAM 80: Write a java program to remove html tags from a string .</b><br>
+<button><a href="p80.java">code</a></button> <button><a href="p80.png">output</a></button><br>
+         
+<b>PROGRAM 81:Write a java program to count total number of lines from a string.</b><br>
+<button><a href="p81.java">code</a></button> <button><a href="p81.png">output</a></button><br>
+         
+<b>PROGRAM 82:Write a Java program to sum values of an array.</b><br>
+<button><a href="p82.java">code</a></button> <button><a href="p82.png">output</a></button><br>
+         
+<b>PROGRAM 83: Write a Java program to find the index of an array element.</b><br>
+<button><a href="p83.java">code</a></button> <button><a href="p83.png">output</a></button><br>
+         
+<b>PROGRAM 84:Write a Java program to calculate the average value of array elements.</b><br>
+<button><a href="p84.java">code</a></button> <button><a href="p84.png">output</a></button><br>
+         
+<b>PROGRAM 85:Write a Java program to test if an array contains a specific value.</b><br>
+<button><a href="p85.java">code</a></button> <button><a href="p85.png">output</a></button><br>
+         
+<b>PROGRAM 86:Write a Java program to find the maximum and minimum value of an array.</b><br>
+<button><a href="p86.java">code</a></button> <button><a href="p86.png">output</a></button><br>
+         
+<b>PROGRAM 87:Write a Java program to insert an element (specific position) into an array.</b><br>
+<button><a href="p87.java">code</a></button> <button><a href="p87.png">output</a></button><br>
+         
+<b>PROGRAM 88:Write a Java program to reverse an array of integer values.</b><br>
+<button><a href="p88.java">code</a></button> <button><a href="p88.png">output</a></button><br>
+         
+<b>PROGRAM 89:Write a Java program to find the common elements between two arrays.</b><br>
+<button><a href="p89.java">code</a></button> <button><a href="p89.png">output</a></button><br>
+         
+<b>PROGRAM 90:Write a Java program to find the duplicate values of an array of integer value.</b><br>
+<button><a href="p90.java">code</a></button> <button><a href="p90.png">output</a></button><br>
+         
+<b>PROGRAM 91:Write a Java program to convert an array to ArrayList.</b><br>
+<button><a href="p91.java">code</a></button> <button><a href="p91.png">output</a></button><br>
+         
+<b>PROGRAM 92:Write a Java program to add two matrices of the same size.</b><br>
+<button><a href="p92.java">code</a></button> <button><a href="p92.png">output</a></button><br>
+         
+<b>PROGRAM 93:Write a Java program to find second largest number from the array.</b><br>
+<button><a href="p93.java">code</a></button> <button><a href="p93.png">output</a></button><br>
+         
+<b>PROGRAM 94:Write a Java program to find second lowest number from the array.</b><br>
+<button><a href="p94.java">code</a></button> <button><a href="p94.png">output</a></button><br>
+         
+<b>PROGRAM 95:Write a Java program to find the number of even and odd integers in a given array of integers.</b><br>
+<button><a href="p95.java">code</a></button> <button><a href="p95.png">output</a></button><br>
+         
+<b>PROGRAM 96:Write a Java program to get the difference between the largest and smallest values in an array of integers.</b><br>
+<button><a href="p96.java">code</a></button> <button><a href="p96.png">output</a></button><br>
+         
+<b>PROGRAM 97:Write a Java program to segregate all 0s on left side and all 1s on right side of a given array of 0s and 1s.</b><br>
+<button><a href="p97.java">code</a></button> <button><a href="p97.png">output</a></button><br>
+         
+<b>PROGRAM 98:Write a Java program to cyclically rotate a given array clockwise by one.</b><br>
+<button><a href="p98.java">code</a></button> <button><a href="p98.png">output</a></button><br>
+         
+<b>PROGRAM 99:java program to print all unique element in an array.</b><br>
+<button><a href="p99.java">code</a></button> <button><a href="p99.png">output</a></button><br>
+         
+<b>PROGRAM 100:Write a Java Program to Sort the Array in an Ascending Order.</b><br>
+<button><a href="p100.java">code</a></button> <button><a href="p100.png">output</a></button><br>
+         
+<b>PROGRAM 101:Write a Java Program to Sort the Array in an Descending Order.</b><br>
+<button><a href="p101.java">code</a></button> <button><a href="p101.png">output</a></button><br>
+         
+<b>PROGRAM 102:Write a Java Program to Sort Names in an Alphabetical Order.</b><br>
+<button><a href="p102.java">code</a></button> <button><a href="p102.png">output</a></button><br>
+         
+<b>PROGRAM 103:Write a Java Program to Display Transpose Matrix.</b><br>
+<button><a href="p103.java">code</a></button> <button><a href="p103.png">output</a></button><br>
+         
+<b>PROGRAM 104:Write a Java Program to Search Key Elements in an Array.</b><br>
+<button><a href="p104.java">code</a></button> <button><a href="p104.png">output</a></button><br>
+         
+<b>PROGRAM 105:Write a Java Program to Accept the Marks of a Student and find Total Marks and Percentage.</b><br>
+<button><a href="p105.java">code</a></button> <button><a href="p105.png">output</a></button><br>
+         
+<b>PROGRAM 106: Write a java program to print numbers from 1 to 10 using loop.</b><br>
+<button><a href="p106.java">code</a></button> <button><a href="p106.png">output</a></button><br>
+         
+<b>PROGRAM 107: Write a java program to calculate the sum of first 10 natural number using loop.</b><br>
+<button><a href="p107.java">code</a></button> <button><a href="p107.png">output</a></button><br>
+         
+<b>PROGRAM 108:Write a Java program to print multiplication table of given number.</b><br>
+<button><a href="p108.java">code</a></button> <button><a href="p108.png">output</a></button><br>
+         
+<b>PROGRAM 109:Write a Java program to find the factorial value of any number entered through the keyboard.</b><br>
+<button><a href="p109.java">code</a></button> <button><a href="p109.png">output</a></button><br>
+         
+<b>PROGRAM 110:Write a Java program that prompts the user to input an integer and then outputs the number with the digits reversed order.</b><br>
+<button><a href="p110.java">code</a></button> <button><a href="p110.png">output</a></button><br>
+         
+<b>PROGRAM 111:Write a Java program that reads a set of integers, and then prints the sum of the even and odd integers using loop.</b><br>
+<button><a href="p111.java">code</a></button> <button><a href="p111.png">output</a></button><br>
+         
+<b>PROGRAM 112:Write a Java program to check whether the number is a prime number or not.</b><br>
+<button><a href="p112.java">code</a></button> <button><a href="p112.png">output</a></button><br>
+         
+<b>PROGRAM 113:Write a Java program to calculate HCF of Two given numbers using loop .</b><br>
+<button><a href="p113.java">code</a></button> <button><a href="p113.png">output</a></button><br>
+         
+<b>PROGRAM 114: Write a Java program to enter the numbers till the user wants and at the end it should display the count of positive, negative and zeros.</b><br>
+<button><a href="p114.java">code</a></button> <button><a href="p114.png">output</a></button><br>
+         
+<b>PROGRAM 115:Write a Java program to enter the numbers till the user wants and at the end the program should display the largest and smallest numbers entered.</b><br>
+<button><a href="p115.java">code</a></button> <button><a href="p115.png">output</a></button><br>
+         
+<b>PROGRAM 116:Write a Java program to print out all Armstrong numbers between 1 to 600 using loop.</b><br>
+<button><a href="p116.java">code</a></button> <button><a href="p116.png">output</a></button><br>
+         
+<b>PROGRAM 117:Write a java program to count total number of notes in entered amount using loop.</b><br>
+<button><a href="p117.java">code</a></button> <button><a href="p117.png">output</a></button><br>
+         
+<b>PROGRAM 118:Write a Java program to print Fibonacci series of n terms where n is input by user using loop.</b><br>
+<button><a href="p118.java">code</a></button> <button><a href="p118.png">output</a></button><br>
+         
+<b>PROGRAM 119:Write a java program to calculate the sum of following series where n is input by user.</b><br>
+<button><a href="">code</a></button> <button><a href="p119.png">output</a></button><br>
+         
+<b>PROGRAM 120:Write a Java method to compute the average of three numbers.</b><br>
+<button><a href="p120.java">code</a></button> <button><a href="p120.png">output</a></button><br>
+         
+<b>PROGRAM 121:Write a Java method to find the smallest number among three numbers.</b><br>
+<button><a href="p121.java">code</a></button> <button><a href="p121.png">output</a></button><br>
+         
+<b>PROGRAM 122:Write a Java method to count all words in a string.</b><br>
+<button><a href="p122.java">code</a></button> <button><a href="p122.png">output</a></button><br>
+         
+<b>PROGRAM 123:Write a Java method to count all vowels in a string</b><br>
+<button><a href="p123.java">code</a></button> <button><a href="p123.png">output</a></button><br>
+         
+<b>PROGRAM 124: Write a Java method to compute the sum of the digits in an integer.</b><br>
+<button><a href="p124.java">code</a></button> <button><a href="p124.png">output</a></button><br>
+         
+<b>PROGRAM 125:Write a Java method to check whether an year entered by the user is a leap year or not.</b><br>
+<button><a href="p125.java">code</a></button> <button><a href="p125.png">output</a></button><br>
+         
+<b>PROGRAM 126:Write a Java method to calculate the area of a triangle.</b><br>
+<button><a href="p126.java">code</a></button> <button><a href="p126.png">output</a></button><br>
+
+<b>PROGRAM 127:Write a Java method to find the area of a pentagon.</b><br>
+<button><a href="p127.java">code</a></button> <button><a href="p127.png">output</a></button><br>
+
+<b>PROGRAM 128:Write a Java method to find number is even number or not.</b><br>
+<button><a href="p128.java">code</a></button> <button><a href="p128.png">output</a></button><br>
+
+<b>PROGRAM 129:Write a Java method to check numbers is palindrome number or not.</b><br>
+<button><a href="p129.java">code</a></button> <button><a href="p129.png">output</a></button><br>
+
+<b>PROGRAM 130:Write a Java method to displays prime numbers between 1 to 20.</b><br>
+<button><a href="p130.java">code</a></button> <button><a href="p130.png">output</a></button><br>
+
+<b>PROGRAM 131:Write a Java method to find GCD and LCM of Two Numbers.</b><br>
+<button><a href="P131.java">code</a></button> <button><a href="p131.png">output</a></button><br>
+
+<b>PROGRAM 132:Write a Java method to find factorial using recursion in java.</b><br>
+<button><a href="P132.java">code</a></button> <button><a href="p132.png">output</a></button><br>
+
+<b>PROGRAM 133:Write a Java program to reverse an integer number.</b><br>
+<button><a href="P133.java">code</a></button> <button><a href="p133.png">output</a></button><br>
+
+<b>PROGRAM 134: Write a Java program to round a float number to specified decimals.</b><br>
+<button><a href="P134.java">code</a></button> <button><a href="p134.png">output</a></button><br>
+
+<b>PROGRAM 135:Write a Java program to test if a double number is an integer.</b><br>
+<button><a href="P135.java">code</a></button> <button><a href="p135.png">output</a></button><br>
+
+<b>PROGRAM 136:Write a Java program to round up the result of integer division.</b><br>
+<button><a href="p136.java">code</a></button> <button><a href="p136.png">output</a></button><br>
+
+<b>PROGRAM 137:Write a Java program to convert Roman number to an integer number.</b><br>
+<button><a href="p137.java">code</a></button> <button><a href="p137.png">output</a></button><br>
+
+<b>PROGRAM 138:Write a Java program to convert a float value to absolute value.</b><br>
+<button><a href="p138.java">code</a></button> <button><a href="p138.png">output</a></button><br>
+
+<b>PROGRAM 139:Write a Java program to accept a float value of number and return a rounded float value.</b><br>
+<button><a href="p139.java">code</a></button> <button><a href="p139.png">output</a></button><br>
+</ul>
+</div>    
+</body></html>
