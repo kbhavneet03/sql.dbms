@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class A
+{
+public static void main(String st[])
+{
+int a,b,c;
+System.out.print("Enter first number = ");
+Scanner s1=new Scanner(System.in);
+a=s1.nextInt();
+
+System.out.print("Enter second number = ");
+Scanner s2=new Scanner(System.in);
+b=s2.nextInt();
+
+System.out.print("Enter third number = ");
+Scanner s3=new Scanner(System.in);
+c=s3.nextInt();
+if(a<b && a<c)
+{
+System.out.print(a+" "+"is smaller");
+}
+else if(b<c && b<a)
+{
+System.out.print(b+" "+"is smaller");
+}
+else
+{
+System.out.print(c+" "+"is smaller");
+}
+}
+}
+

@@ -1,0 +1,18 @@
+//p132-write a java method to find the factorial using recursion in java with output.
+
+ class p132 {
+
+    public static void main(String[] args) {
+        int number = 5; // Change this number to calculate factorial for a different number
+        long factorial = calculateFactorial(number);
+        System.out.println("Factorial of " + number + " is: " + factorial);
+    }
+
+    public static long calculateFactorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * calculateFactorial(n - 1);
+        }
+    }
+}
