@@ -1,0 +1,483 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='./css/main.css' />
+    <link rel="shortcut icon" href="img\logo\Garcia Tavern-logos.jpeg" />
+    <script src="./js/anime.min.js"></script>
+    <script src="js/intro.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <style>
+        root {
+
+            --font: slategrey;
+            --background: wheat;
+            --menuColor: slategrey;
+        }
+
+
+        body {
+            width: auto;
+            background-image: url('https://wallpaperaccess.com/full/2454628.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            background-color: rgba(6, 3, 15, 0.926);
+            font-family:  'Lucida Grande';
+        }
+
+        /* nav bar styling */
+
+        .navBar {
+            margin-bottom: 20px;
+            width: 100%;
+            height: 10%;
+            position:scroll;
+            left: 0;
+            top: 0;
+            display: inline-block;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.541);
+        }
+
+        .navBar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        img {
+            margin: 10px;
+        }
+
+        i {
+            font-size: 20px;
+        }
+
+        i:hover,
+        a:hover {
+            color: dodgerblue;
+            cursor: pointer;
+        }
+
+        .navBar nav li {
+            padding: 10px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+
+
+        #hamMenu {
+            visibility: hidden;
+        }
+
+        /*  grid system for the webpage */
+
+        .header {
+            width: 80%;
+            height: auto;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            display: grid;
+            grid-template-rows: 1fr;
+        }
+
+        .header>div {
+            margin-top: 10%;
+            max-width: 100%;
+
+        }
+
+        .IntroMsg {
+            margin: 20px;
+            position: relative;
+            width: 100%;
+            left: 5%;
+            top: -20%;
+            text-align: center;
+            padding: 10px;
+            height: auto;
+            opacity: 0.9;
+            background-color: transparent;
+            border-radius: 10px;
+
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        /* for image seperation */
+
+
+        .story {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .imgContainer {
+            width: 90%;
+            height: fit-content;
+            position: relative;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            color: white;
+
+
+        }
+
+        .imgContainer>div {
+            margin: 10px;
+        }
+
+        .menuIntro>img {
+            width: 75%;
+            border-radius: 10%;
+            height: auto;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            filter: blur(0.5px);
+        }
+
+        .menuIntro {
+            text-align: center;
+            color: rgb(39, 39, 39);
+            border-radius: 10px;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            width: 100%;
+            left: 0%;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.9;
+            background-color: rgba(100, 98, 98, 0.288);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .menu,
+            .form {
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr;
+                position: relative;
+                top: -5%;
+
+            }
+
+            .logo {
+                width: 200px;
+                height: 200px;
+            }
+
+            html {
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h2,
+            h1 {
+                font-size: 18px;
+            }
+
+            .navBar,
+            .navBar nav li {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            #hamMenu {
+                visibility: visible;
+                color: white;
+                font-size: 25px;
+                z-index: -1;
+            }
+
+        }
+
+
+        .form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            position: relative;
+            width: 100%;
+            left: 0%;
+            top: 40px;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.9;
+            background-color: rgba(100, 98, 98, 0.288);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        .form input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+            opacity: 0.9;       
+            margin: 10px;
+
+        }
+
+        .form span {
+            margin: 10px;
+        }
+
+        .form button {
+            width: 60%;
+            position: relative;
+            left: 2%;
+            margin: 5px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            text-shadow: 0.5px 0.5px black;
+            background-color: rgb(109, 103, 93);
+            padding: 10px;
+        }
+
+        .form button:hover {
+            cursor: pointer;
+            box-shadow: 0px 3px 6px slategray;
+        }
+
+        .form button:active {
+            background-color: rgba(30, 96, 161, 0.801);
+            border: none;
+        }
+
+        #home-menu ul {
+            background-color: white;
+            border-radius: 5px;
+            list-style: none;
+            padding: 30px;
+        }
+
+        #home-menu h2 {
+            text-shadow: 0.5px 0.5px black;
+        }
+
+        #home-menu ul:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        #home-menu li {
+            float: left;
+            width: 50%;
+            padding: 0;
+            margin: 20px 0 20px 8%;
+            border-bottom: 1px solid slategray;
+        }
+#toc_container {
+    background: rgba(12, 6, 31, 0.802) none repeat scroll 0 0;
+    border: 1px solid rgb(232, 222, 224);
+    display: table;
+    font-size: 95%;
+    margin-top: 6em;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+    color: rgb(249, 236, 236);
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+a[href]{
+    color: rgb(130, 165, 210); 
+}
+
+
+</style>
+</head>
+<body>
+    <div class="navBar" id="nv">
+        <nav>
+            <ul>
+                <!-- main nav section -->
+                <li><a href="website.html">HOME </a></li>
+                <li><a href="sql.html">MySQL</a></li>
+                <li><a href="plsql.html">PL/SQL</a>
+                    <li><a href="java.html">Java</a>
+                <li><a href="about.html">About</a>
+                    <li><a href="other.html">Other</a>
+                    
+            </ul>
+        </nav>
+    </div>
+<body>
+    <div id="toc_container">
+        <h2>STRINGS</h2>
+        <b>PROGRAM 1:Program to Check if a String contains only digits?</b><br>
+        <button><a href="7017String1.java">code</a></button> <button><a href="7017String1.png">output</a></button><br>
+        
+        <b>PROGRAM 2:Program to perform Deep Copy for String?</b><br>
+        <button><a href="7017String2.java">code</a></button> <button><a href="7017string2.png">output</a></button><br>
+        
+        <b>PROGRAM 3:Program to prove String is immutable programmatically?</b><br>
+        <button><a href="7105_Strings_3.java">code</a></button> <button><a href="7105_Strings_3.png">output</a></button><br>
+        
+        <b>PROGRAM 4:Program to remove all occurrences of a given character from input String?</b><br>
+        <button><a href="7023Strings4.java">code</a></button> <button><a href="7023Strings4.png">output</a></button><br>
+        
+        <b>PROGRAM 5:Program to append the string using StringBuffer class</b><br>
+        <button><a href="7038String5.java">code</a></button> <button><a href="7038String5.png">output</a></button><br>
+        
+        <b>PROGRAM 6:Program to insert the string using StringBuffer class</b><br>
+        <button><a href="7073_string6.java">code</a></button> <button><a href="7073_string6.png" alt="output">output</a></button><br>
+        
+        <b>PROGRAM 7:Program to Add Characters to a String</b><br>
+        <button><a href="7073_string7.java" alt="code">code</a></button> <button><a href="7073_string7.png" alt="output">output</a></button><br>
+        
+        <b>PROGRAM 8:Program to Add Characters to a String</b><br>
+        <button><a href="7055string8.java">code</a></button> <button><a href="7055string8.png">output</a></button><br>
+        
+        <b>PROGRAM 9:Program to Check Anagram</b><br>
+        <button><a href="7025string9.java">code</a></button> <button><a href="7025string9.png">output</a></button><br>
+        
+        <b>PROGRAM 10:Program to check whether a string is a Palindrome</b><br>
+        <button><a href="7017String10.java">code</a></button> <button><a href="7017String10.png" alt="output">output</a></button><br>
+        
+        <b>PROGRAM 11:Program to Convert Enum to String</b><br>
+        <button><a href="7017String11.java">code</a></button> <button><a href="7017String11.png">output</a></button><br>
+        
+        <b>PROGRAM 12: Program to Convert String to String Array</b><br>
+        <button><a href="7055string12.java">code</a></button> <button><a href="7055string12.png">output</a></button><br>
+        
+        <b>PROGRAM 13:Program to count number of words in a String?</b><br>
+        <button><a href="7073_string13.java">code</a></button> <button><a href="7073_string13.png" alt="output">output</a></button><br>
+        
+        
+        <b>PROGRAM 14:Program to count the total number of characters in a string</b><br>
+        <button><a href="7105_Strings_14.java">code</a></button> <button><a href="7105_Strings_14.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 15:Program to count the total number of punctuation characters exists in a String</b><br>
+        <button><a href="7107strings15.java">code</a></button> <button><a href="7107strings15.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 16:Program to count the total number of vowels and consonants in a string</b><br>
+        <button><a href="7057_String16.java">code</a></button> <button><a href="7057_String16.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 17:Program to determine whether a given string is palindrome</b><br>
+        <button><a href="7095_21_Strings_17.java">code</a></button> <button><a href="7095_21_Strings_17.png" alt="output">output</a></button><br>\
+
+        <b>PROGRAM 18:Program to determine whether one string is a rotation of another</b><br>
+        <button><a href="7095_21_Strings_18.java">code</a></button> <button><a href="7095_21_Strings_18.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 19:Program to divide a string in 'N' equal parts.</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 20:Program to find all subsets of a string</b><br>
+        <button><a href="7072Strings20.java">code</a></button> <button><a href="7072Strings20.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 21: Program to find all the permutations of a string</b><br>
+        <button><a href="7055string21.java">code</a></button> <button><a href="7055string21.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 22:Program to find maximum and minimum occurring character in a string</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 23: Program to find Reverse of the string</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 24:Program to find the duplicate characters in a string</b><br>
+        <button><a href="7095_21_Strings_24.java">code</a></button> <button><a href="7095_21_Strings_24.png" alt="output">output</a></button><br>
+        
+        <b>PROGRAM 25:Program to find the duplicate words in a string</b><br>
+        <button><a href="7055string25.java">code</a></button> <button><a href="7055string25.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 26:Program to find the frequency of characters</b><br>
+        <button><a href="7062Strings26.java">code</a></button> <button><a href="7062Strings26.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 27:Program to find the largest and smallest word in a string</b><br>
+        <button><a href="7085String27.java">code</a></button> <button><a href="7085String27.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 28: Program to find the longest repeating sequence in a string</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 29:Program to find the most repeated word in a text file</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 30:Program to find the number of the words in the given text file</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 31:Program to Get a Character From the Given String</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 32: Program to Insert a string into another string</b><br>
+        <button><a href="7105_Strings_32.java">code</a></button> <button><a href="7105_Strings_32.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 33:Program to Iterate Over Characters in String</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 34:Program to Print a New Line in String</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 35:Program to Print even length words</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 36: Program to print smallest and biggest possible palindrome word in a given string
+        </b><br>
+        <button><a href="7095_21_Strings_36.java">code</a></button> <button><a href="7095_21_Strings_36.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 37:Program to remove all the white spaces from a string</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 38:Program to replace lower-case characters with upper-case and vice-versa</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+        
+        <b>PROGRAM 39:Program to replace the spaces of a string with a specific character</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 40: Program to separate the Individual Characters from a String</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 41: Program to Splitting into a number of sub-strings</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 42:Program to swap two string variables without using third or temp variable.</b><br>
+        <button><a href="7105_Strings_42.java">code</a></button> <button><a href="7105_Strings_42.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 43:Program to Swapping Pair of Characters</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+        
+        <b>PROGRAM 44:Read two String user input and check if first contains second?</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 45:Reserve String without reverse() function</b><br>
+        <button><a href="7077string45.java">code</a></button> <button><a href="7077string45.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 46:Reverse String Word by Word</b><br>
+        <button><a href="strings_46_7032.java">code</a></button> <button><a href="strings_46_7032.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 47:Write a program to check if two Strings are created with same characters?</b><br>
+        <button><a href="7105_Strings_47.java">code</a></button> <button><a href="7105_Strings_47.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 48:Write a program to find out first non repeated character from input String?</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+
+        <b>PROGRAM 49:Create an object StringBuffer class to reverse the string.</b><br>
+        <button><a href="strings7048_49.java">code</a></button> <button><a href="strings7048_49.png" alt="output">output</a></button><br>
+
+        <b>PROGRAM 50: Create an object StringBuffer class to show functionality of insert, append, delete and replace functions.</b><br>
+        <button><a href="">code</a></button> <button><a href="" alt="output">output</a></button><br>
+</div>   
+</body></html>

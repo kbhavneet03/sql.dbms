@@ -1,0 +1,373 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='./css/main.css' />
+    <link rel="shortcut icon" href="img\logo\Garcia Tavern-logos.jpeg" />
+    <script src="./js/anime.min.js"></script>
+    <script src="js/intro.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <style>
+        root {
+
+            --font: slategrey;
+            --background: wheat;
+            --menuColor: slategrey;
+        }
+
+
+        body {
+            width: auto;
+            background-image: url('https://wallpaperaccess.com/full/2454628.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            background-color: rgba(6, 3, 15, 0.926);
+            font-family:  'Lucida Grande';
+        }
+
+        /* nav bar styling */
+
+        .navBar {
+            margin-bottom: 20px;
+            width: 100%;
+            height: 10%;
+            position:scroll;
+            left: 0;
+            top: 0;
+            display: inline-block;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.541);
+        }
+
+        .navBar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        img {
+            margin: 10px;
+        }
+
+        i {
+            font-size: 20px;
+        }
+
+        i:hover,
+        a:hover {
+            color: dodgerblue;
+            cursor: pointer;
+        }
+
+        .navBar nav li {
+            padding: 10px;
+            margin: 20px;
+            list-style-type: none;
+            display: inline-block;
+        }
+
+
+        #hamMenu {
+            visibility: hidden;
+        }
+
+        /*  grid system for the webpage */
+
+        .header {
+            width: 80%;
+            height: auto;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            display: grid;
+            grid-template-rows: 1fr;
+        }
+
+        .header>div {
+            margin-top: 10%;
+            max-width: 100%;
+
+        }
+
+        .IntroMsg {
+            margin: 20px;
+            position: relative;
+            width: 100%;
+            left: 5%;
+            top: -20%;
+            text-align: center;
+            padding: 10px;
+            height: auto;
+            opacity: 0.9;
+            background-color: transparent;
+            border-radius: 10px;
+
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        /* for image seperation */
+
+
+        .story {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .imgContainer {
+            width: 90%;
+            height: fit-content;
+            position: relative;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            color: white;
+
+
+        }
+
+        .imgContainer>div {
+            margin: 10px;
+        }
+
+        .menuIntro>img {
+            width: 75%;
+            border-radius: 10%;
+            height: auto;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            filter: blur(0.5px);
+        }
+
+        .menuIntro {
+            text-align: center;
+            color: rgb(39, 39, 39);
+            border-radius: 10px;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            width: 100%;
+            left: 0%;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.9;
+            background-color: rgba(100, 98, 98, 0.288);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .menu,
+            .form {
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr;
+                position: relative;
+                top: -5%;
+
+            }
+
+            .logo {
+                width: 200px;
+                height: 200px;
+            }
+
+            html {
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h2,
+            h1 {
+                font-size: 18px;
+            }
+
+            .navBar,
+            .navBar nav li {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            #hamMenu {
+                visibility: visible;
+                color: white;
+                font-size: 25px;
+                z-index: -1;
+            }
+
+        }
+
+
+        .form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            position: relative;
+            width: 100%;
+            left: 0%;
+            top: 40px;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.9;
+            background-color: rgba(100, 98, 98, 0.288);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        .form input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+            opacity: 0.9;
+            margin: 10px;
+
+        }
+
+        .form span {
+            margin: 10px;
+        }
+
+        .form button {
+            width: 60%;
+            position: relative;
+            left: 2%;
+            margin: 5px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            text-shadow: 0.5px 0.5px black;
+            background-color: rgb(109, 103, 93);
+            padding: 10px;
+        }
+
+        .form button:hover {
+            cursor: pointer;
+            box-shadow: 0px 3px 6px slategray;
+        }
+
+        .form button:active {
+            background-color: rgba(30, 96, 161, 0.801);
+            border: none;
+        }
+
+        #home-menu ul {
+            background-color: white;
+            border-radius: 5px;
+            list-style: none;
+            padding: 30px;
+        }
+
+        #home-menu h2 {
+            text-shadow: 0.5px 0.5px black;
+        }
+
+        #home-menu ul:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        #home-menu li {
+            float: left;
+            width: 50%;
+            padding: 0;
+            margin: 20px 0 20px 8%;
+            border-bottom: 1px solid slategray;
+        }
+#toc_container {
+    background: rgba(12, 6, 31, 0.802) none repeat scroll 0 0;
+    border: 1px solid rgb(232, 222, 224);
+    display: table;
+    font-size: 95%;
+    margin-top: 6em;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+    color: rgb(249, 236, 236);
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+a[href]{
+    color: rgb(130, 165, 210); 
+}
+
+
+</style>
+</head>
+<body>
+    <div class="navBar" id="nv">
+        <nav>
+            <ul>
+                <!-- main nav section -->
+                <li><a href="website.html">HOME </a></li>
+                <li><a href="sql.html">MySQL</a></li>
+                <li><a href="plsql.html">PL/SQL</a>
+                    <li><a href="java.html">Java</a>
+                <li><a href="about.html">About</a>
+                    <li><a href="other.html">Other</a>
+            </ul>
+        </nav>
+    </div>
+<body>
+<div id="toc_container">
+   <h2>2D Array</h2>
+   
+
+<b>PROGRAM 1: Enter the Matrix of rows and columns entered by the user and print in matrix format.</b><br>
+<button><a href="2Darray_1_7014.java">code</a></button> <button><a href="2darray_1_7014.png">output</a></button><br>
+      
+<b>PROGRAM 2: Program to Add Two Matrices. </b><br>
+<button><a href="2Darray_2_7020.java">code</a></button> <button><a href="2darray_2_7020.png">output</a></button><br>
+      
+<b>PROGRAM 3:Program to Multiply Two Matrices.</b><br>
+<button><a href="2Darray_3_7007.java">code</a></button> <button><a href="2darray_3_7007.png">output</a></button><br>
+
+<b>PROGRAM 4:  Program to subtract the two matrices.</b><br>
+<button><a href="2Darray_4_7006.java">code</a></button> <button><a href="2darray_4_7006.png">output</a></button><br>
+
+<b>PROGRAM 5: Program to determine whether two matrices are equal.</b><br>
+<button><a href="2Darray_5_7014.java">code</a></button> <button><a href="2darray_5_7014.png">output</a></button><br>
+
+<b>PROGRAM 6: Program to display the lower triangular matrix.</b><br>
+<button><a href="2Darray_6_7014.java">code</a></button> <button><a href="2darray_6_7014.png">output</a></button><br>
+
+<b>PROGRAM 7: Program to display the lower triangular matrix.</b><br>
+<button><a href="2Darray_7_7003.java">code</a></button> <button><a href="2darray_7_7003.png">output</a></button><br>
+
+<b>PROGRAM 8:Program to find the frequency of odd & even numbers in the given matrix.</b><br>
+<button><a href="2Darray_8_.java">code</a></button> <button><a href="2darray_8_.png">output</a></button><br>
+
+<b>PROGRAM 9:  Program to find the sum of each row and each column of a matrix.</b><br>
+<button><a href="2Darray_9_7012.java">code</a></button> <button><a href="2darray_9_7012.png">output</a></button><br>
+
+<b>PROGRAM 10: Program to find the transpose of a given matrix </b><br>
+<button><a href="2Darray_10_7044.java">code</a></button> <button><a href="2darray_10_7044.png">output</a></button><br>
+
+<b>PROGRAM 11:Program to determine whether a given matrix is an identity matrix.</b><br>
+<button><a href="2Darray_11_7057.java">code</a></button> <button><a href="2darray_11_7057.png">output</a></button><br>
+
+<b>PROGRAM 12:Program to Transpose matrix.</b><br>
+<button><a href="2Darray_12_7003.java">code</a></button> <button><a href="2darray_12_.png">output</a></button><br>
+
+<b>PROGRAM 13:Program to determine whether a given matrix is a sparse matrix.</b><br>
+<button><a href="">code</a></button> <button><a href="">output</a></button><br>
+
+
+</body>
+</html>
